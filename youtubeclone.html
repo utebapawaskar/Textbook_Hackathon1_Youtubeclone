@@ -1,0 +1,550 @@
+ 
+ 
+ 
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+ <title>Youtube clone</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.left_nav img{
+width:80px;
+height:60px;
+margin-left:5px;
+}
+
+.navbar{
+display:flex;
+align-item:center;
+justify-content:space-between;
+
+}
+
+.left_nav{
+display:flex;
+align-item:center;
+
+}
+
+.left_nav span{
+padding:0px 7px;
+margin:20px 5px;
+cursor:pointer;
+}
+
+.middle_nav form{
+border:1px solid #ddd;
+height:35px;
+margin-top:10px;
+padding:0;
+display:flex;
+
+}
+
+.middle_nav input{
+width:500px;
+padding:10px;
+margin:;
+border:none;
+border-radius:0;
+
+}
+.middle_nav button{
+padding:0px 5px;
+margin:0;
+height:100%;
+border:none;
+border-radius:0;
+}
+
+.right_nav{
+display:flex;
+align-item:center;
+padding:15px;
+}
+.right_nav span{
+margin:0px 10px;
+
+}
+
+.content{
+height: calc(100vh - 70px);
+display:flex;
+overflow:hidden;
+
+}
+
+.sidebar{
+display:flex;
+height:100%;
+width:230px;
+background-color:white;
+overflow-y:scroll;
+}
+
+.sidebar_options{
+width:100%;
+display:flex;
+flex-direction:column;
+margin-bottom:15px;
+margin-top:15px;
+ 
+}
+
+.material-icons{
+color:#525252;
+}
+
+h4{
+color:#525252;
+}
+ 
+.sidebar_option{
+display:flex;
+ align-item:center;
+padding:12px 25px;
+}
+
+.sidebar_option h4{
+margin-left:15px;
+}
+
+.sidebar_option:hover{
+background:#e5e5e5;
+cursor:pointer;
+}
+
+.sidebar::-webkit-scrollbar{
+display:none;
+}
+hr {
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
+}
+
+.videos {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  padding: 15px 15px;
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+}
+
+
+
+.videos__container {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.video {
+  width: 310px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+}
+
+.video__thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.video__thumbnail img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.author img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.video__details {
+  display: flex;
+  margin-top: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h3 {
+  color: rgb(3, 3, 3);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(3, 3, 3);
+}
+
+
+
+</style>    
+  </head>
+  <body>
+<!--navbar -->
+<div class="navbar">
+<div class="left_nav">
+ <span class="material-icons">
+menu
+</span>
+<img src="youtubelogo.jpg" alt="Youtube logo">
+</div>
+
+<div class="middle_nav">
+<form action="">
+<input type="text" placeholder="search">
+<button><span class="material-icons">
+search
+</span>
+</button>
+</form>
+</div>
+
+<div class="right_nav">
+<span class="material-icons">
+videocam
+</span>
+
+<span class="material-icons">
+apps
+</span>
+
+ <span class="material-icons">
+notifications
+</span>
+
+<span class="material-icons">
+account_circle
+</span>
+</div>
+</div>
+ <div class="content">
+<!--sidebar-->
+<div class="sidebar">
+<div class="sidebar_options">
+<div class="sidebar_option">
+<span class="material-icons">
+home
+</span>
+<h4>Home</h4>
+</div>
+<div class="sidebar_option">
+<span class="material-icons">
+local_fire_department
+</span>
+<h4>Trending</h4>
+</div>
+<div class="sidebar_option">
+<span class="material-icons">
+subscriptions
+</span>
+<h4>Subcriptions</h4>
+</div><hr>
+<div class="sidebar_option">
+<span class="material-icons">
+video_library
+</span>
+<h4>Library</h4>
+</div>
+<div class="sidebar_option">
+<span class="material-icons">
+history
+</span>
+<h4>History</h4>
+</div>
+<div class="sidebar_option">
+<span class="material-icons">
+play_arrow
+</span>
+<h4>Your Videos</h4>
+</div>
+<div class="sidebar_option">
+<span class="material-icons">
+play_arrow
+</span>
+<h4>Watch Later</h4>
+</div>
+<div class="sidebar_option">
+<span class="material-icons">
+thumb_up
+</span>
+<h4>Liked Videos</h4>
+</div>
+</div>
+</div>
+
+      <div class="videos">
+        <h1>Recommended</h1>
+
+        <div class="videos__container">
+          <!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+<!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img src="profile.png" alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+
+</div>
+ </div>
+ </body>
+</html>
